@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="startrek">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body ng-controller="mainController">
+
+        <ul>
+            <li ng-repeat="person in people">{{person.first_name}} {{person.last_name}}</li>
+        </ul>
+
+        <form ng-submit="createPerson(newPerson)">
+            <input type="text" placeholder="first" ng-model="newPerson.first_name">
+            <input type="text" placeholder="last" ng-model="newPerson.last_name">
+            <input type="text" placeholder="rank" ng-model="newPerson.rank">
+            <input type="submit" value="CREATE!">
+        </form>
+
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
